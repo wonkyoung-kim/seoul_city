@@ -1,0 +1,86 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: #222;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  line-height: 1.35em;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.blind {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+
+/* 이미지 확대 애니메이션 */
+.ani-scale {
+  overflow: hidden;
+}
+.ani-scale img {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.ani-scale:hover img {
+  transform: scale(1.1);
+}
+
+/* 공용 이미지1 */
+.header .logo a::before,
+.header .search-area .btn-submit::before,
+.sc-board .link-more::before,
+.sc-visual .main-slide .control-box .btn::before,
+.sc-banner .banner-slide .control-box .btn::before, 
+.footer .call-area .call-bg::before {
+  content: '';
+  display: block;
+  background-image: url('../images/img-sprite.png');
+  background-repeat: no-repeat;
+}
+
+/* 주요서비스 공용 이미지2 */
+.sc-service .service-item a::before,
+.sc-seoul-sns .link-sns a::before {
+  content: '';
+  display: block;
+  width: 60px; height: 60px;
+  margin: 0 auto 10px;
+  background-image: url('../images/ico-service.png');
+  background-repeat: no-repeat;
+}
+
+/* main-news */
+.sc-visual .group-slide .btn-tab::before {
+  content: '';
+  display: block;
+  width: 50px; height: 50px;
+  margin: 0 auto 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url('../images/ico-main.png');
+  background-repeat: no-repeat;
+}
+
+/* sns */
+.sc-sns h2::after,
+.sc-sns .sns-list a::before {
+  content: '';
+  display: inline-block;
+  width: 40px; height: 40px;
+  background-image: url('../images/ico-sns-list.png');
+  background-repeat: no-repeat;
+}
+
+/* footer-sns */
+.footer .sns-area a::before {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 24px;
+  background-image: url('../images/ico-footer-sns.png');
+  background-repeat: no-repeat;
+}
